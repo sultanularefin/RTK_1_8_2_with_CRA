@@ -30,12 +30,17 @@ export const notification_Counter_Async = createAsyncThunk(
 
         //amount = 1
         console.log(" amount in ||notification_Counter_Async|| ", amount);
+        // commented on may__28
+
+        /*
         const response = await get_Notification_Counter(35);
         // The value we return becomes the `fulfilled` action payload
 
         console.log("response: ", response);
 
+
         return response.data;
+        */
     }
 );
 
