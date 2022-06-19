@@ -12,6 +12,10 @@ import './index.css';
 import Class_In_FC from "./class_In_FC_Component/Class_In_FC";
 import Linked_List_Testing from "./link_List_Testing/Link_LIst_Testing";
 import White_Board_Link_LIst from "./white_Board/White_Board_Link_LIst";
+import Common_Mistakes_01 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistakes_01";
+import Common_Mistakes_02 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistakes_02";
+import Common_Mistake_03 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistake_03";
+import Local_Fetch from "./localFetch/LocalFetch";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -26,7 +30,16 @@ root.render(
 
         {/*<Linked_List_Testing/>*/}
 
-        <White_Board_Link_LIst/>
+        {/*<White_Board_Link_LIst/>*/}
+
+        {/*<Common_Mistakes_01/>*/}
+
+        {/*<Common_Mistakes_02/>*/}
+
+
+        <Common_Mistake_03/>
+
+        {/*<Local_Fetch/>*/}
     </React.StrictMode>
 );
 

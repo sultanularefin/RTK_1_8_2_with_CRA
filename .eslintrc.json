@@ -237,7 +237,8 @@
         "wrap-regex": "error",
         "yield-star-spacing": "error",
         "yoda": "error",
-        "react/split-platform-components": "off"
+        "react/split-platform-components": "off",
+        "@typescript-eslint/no-explicit-any": "warn"
 
 //        "react/no-unused-styles": 2,
 //        "react/no-inline-styles": "off",

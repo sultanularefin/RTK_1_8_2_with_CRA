@@ -3,19 +3,19 @@ import {Node_Interface, Whiteboard} from "./Whiteboard";
 // import {Linked_List_Testing_Props} from "./link_List_Testing/Link_LIst_Testing";
 
 // White_Board_Link_LIst
-
-export interface White_Board_Link_LIst_Props{
-
-
-}
-
-
 export interface one_Item_Interface{
     id: string,
     lowerId: string|undefined,
     data: string,
 
 }
+export interface White_Board_Link_LIst_Props{
+
+
+}
+
+
+
 const White_Board_Link_LIst: React.FC<White_Board_Link_LIst_Props> = ({
                                                                           // navigation,
                                                                           // route
