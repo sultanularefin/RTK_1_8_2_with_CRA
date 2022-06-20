@@ -16,6 +16,8 @@ import Common_Mistakes_01 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Cal
 import Common_Mistakes_02 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistakes_02";
 import Common_Mistake_03 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistake_03";
 import Local_Fetch from "./localFetch/LocalFetch";
+import Common_Mistake_04 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistake_4";
+import Jack_Herrington from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/React_18";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -37,7 +39,12 @@ root.render(
         {/*<Common_Mistakes_02/>*/}
 
 
-        <Common_Mistake_03/>
+        {/*<Common_Mistake_03/>*/}
+
+        {/*<Common_Mistake_04/>*/}
+
+        <Jack_Herrington/>
+
 
         {/*<Local_Fetch/>*/}
     </React.StrictMode>

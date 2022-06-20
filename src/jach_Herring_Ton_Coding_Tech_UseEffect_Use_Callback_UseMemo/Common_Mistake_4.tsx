@@ -1,5 +1,6 @@
 import React, {
-    useEffect,
+    useCallback,
+    useEffect, useMemo,
     useRef,
     useState
 } from "react";
@@ -32,10 +33,10 @@ export interface My_Component2_Props{
 const numbers =[0,1,2,3,4,5];
 
 
-const My_Component3: React.FC<My_Component2_Props> = ({
-                                                          // navigation,
-                                                          // route
-                                                      }) => {
+const My_Component_4: React.FC<My_Component2_Props> = ({
+                                                           // navigation,
+                                                           // route
+                                                       }) => {
 
     // const numbers =useState<number[]>([]);
 
@@ -182,23 +183,162 @@ const My_Component3: React.FC<My_Component2_Props> = ({
 
     // numbers[0]=[4,5,6];
 
+
+    const add_One=()=>{
+        set_Numbers_State(
+            [
+                ...numbers_State,
+                numbers_State.length]
+
+
+        );
+    };
+
+    const add_One_V2= useCallback( () => {
+            set_Numbers_State(
+                [
+                    ...numbers_State,
+                    numbers_State.length]
+            );
+        },[]
+    );// since the dependency is empty and initally numbers length was 0 thus we get 0.
+
+
+
+
+
+    const add_One_V3= useCallback( () => {
+            set_Numbers_State(
+                [
+                    ...numbers_State,
+                    numbers_State.length]
+            );
+        },[numbers_State]
+    );// this methods take into account the current state of numbers_State.
+
+
+
+
+    const add_One_V4= useCallback( () => {
+
+        // 1. HERE set_Numbers_State CAN SET A NEW VALUE AS PREVIOUSLY SHOWN.
+        // 2. OR IT HAS GIVEN CURRENT VALUE (IE. CURRENT STATE) AND manipulates upon that state)
+            set_Numbers_State((current_Numbers:number[])=>[
+                    ...current_Numbers,
+                    current_Numbers.length
+                ]
+            );
+        },[/*numbers_State*/]
+    );// no dependency array is now needed.
+
+
+
+    const add_One_V5=  () => {
+
+        // 1. HERE set_Numbers_State CAN SET A NEW VALUE AS PREVIOUSLY SHOWN.
+        // 2. OR IT HAS GIVEN CURRENT VALUE (IE. CURRENT STATE) AND manipulates upon that state)
+        set_Numbers_State((current_Numbers: number[]) => [
+                ...current_Numbers,
+                current_Numbers.length
+            ]
+        );
+    };
+
+
+    const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+    const initialValue = 0;
+    const sumWithInitial = array1.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+        initialValue
+    );
+
+
+
+    // const sum_V0 =()=>{
+    const sum_V0 = numbers_State.reduce((accumulator,current_Value)=>accumulator+current_Value,0);
+    // }
+
+
+
+    const sum_V1 = useMemo(()=>numbers_State.reduce((accumulator,current_Value)=>accumulator+current_Value,0),[]);
+
+
+
+    const sum_V2 = useMemo(()=>numbers_State.reduce((accumulator,current_Value)=>accumulator+current_Value,0),
+        [
+            numbers_State
+        ]);
+
+
+
     return(
         <div>
             {/*<p>Hello</p>*/}
 
             <div>Numbers: {JSON.stringify(numbers_State)}</div>
 
+            <div>
+                <button onClick={add_One} >Add One</button>
+            </div>
+
+            <div>
+                <button onClick={add_One_V2} >Add One</button>
+            </div>
+
+
+            <div>
+                <button onClick={add_One_V3} >Add One</button>
+            </div>
+
+            <div>
+                <button onClick={add_One_V4} >Add One</button>
+            </div>
+
+
+
+            <div>
+                <button onClick={add_One_V5} >Add One</button>
+            </div>
+
+
+
+            <div>
+                <p> sum: {sum_V0}</p>
+            </div>
+
+
+
+            <div>
+                <p> sum_V1: {sum_V1}</p>
+            </div>
+
+
+
+            <div>
+                <p> sum_V2: {sum_V2}</p>
+            </div>
+
+
+
+
+
+
+
+
+
         </div>
     );
 
 };
 
-const Common_Mistake_03=()=>{
+const Common_Mistake_04=()=>{
 
-    console.log("inside: of ","Common_Mistake_03");
+    console.log("inside: of ","Common_Mistake_04");
     return(
         <div>
-            <My_Component3/>
+            <My_Component_4/>
         </div>
     );
 
@@ -206,4 +346,4 @@ const Common_Mistake_03=()=>{
 
 
 
-export default Common_Mistake_03;
+export default Common_Mistake_04;
