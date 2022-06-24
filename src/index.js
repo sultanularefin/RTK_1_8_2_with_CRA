@@ -18,6 +18,7 @@ import Common_Mistake_03 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Call
 import Local_Fetch from "./localFetch/LocalFetch";
 import Common_Mistake_04 from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Common_Mistake_4";
 import Jack_Herrington from "./jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/React_18";
+import MD_Testing_Wth_Pkg from "./markdown_Testing/MD_Testing_Wth_Pkg";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -43,7 +44,10 @@ root.render(
 
         {/*<Common_Mistake_04/>*/}
 
-        <Jack_Herrington/>
+        {/* <Jack_Herrington/>*/}
+
+
+        <MD_Testing_Wth_Pkg/>
 
 
         {/*<Local_Fetch/>*/}
