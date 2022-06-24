@@ -5,44 +5,65 @@ import React, {
     useState
 } from "react";
 
-import {Coutries_With_Phone_Flag, test_Numbers, Theme} from "./Coutries_With_Phone_Flag";
-
+// import {Coutries_With_Phone_Flag, test_Numbers, Theme} from "./Coutries_With_Phone_Flag";
+import "./../styles.css";
 
 // const numbers = require('./numbers.json');
 export interface My_Component2_Props{
 
 
 }
+//https://codesandbox.io/s/priceless-estrela-c2chs0?file=/src/App.js:46-68
 
-// TEST_NUMBERS
-// ## CONVENTION ---RULES ARE FOR YOUR OWN GOOD.
-// 1. ALWAYS USE THE SETTER WHEN SETTING THE STATE.
-// YOU SHOULD ONLY CHANGE STATE, IN 2 CASES:
-
-// 1. WHEN YOUR APPLICATION IS LOADED.
-// INSIDE USEEFFECT AND USECALLBACK HOOKS.
-
-// 2. USEEFFECT, IN FC WHEN A COMPONENT LOADED OR UNLOADED (TIMER OUT, APP STATE CHANGE, BACK BUTTON PRESS) || OR SOME OTHER STATE CHANGED AND U WNAT TO CHANGE ANOTHER STATE.
-
-// 3. USECALLBACK: USER INTERACTION SUCH AS CLICK.
-
-// 4. To run eseEffect only once use an empty array.
-// 5. Don't depend on data you set
-
-
-const numbers =[0,1,2,3,4,5];
-
+// https://c2chs0.csb.app/
+// codesandbox.io/s/priceless-estrela-c2chs0?file=/src/App.js
 
 const React_18: React.FC<My_Component2_Props> = ({})=>{
-// navigation,
-// route
 
-    return(
-        <div>
-            <p>hello</p>
 
+
+    const BadStopwatch = () => {
+        const [count, setCount] = useState(0);
+
+        useEffect(() => {
+            console.log("BadStopwatch useEffect");
+            setInterval(() => {
+                setCount((some_Value) => some_Value + 0.1);
+            }, 100);
+        }, []);
+
+        return <div>Bad Stopwatch: {count.toFixed(1)}</div>;
+    };
+
+
+
+    const GoodStopwatch = () => {
+        const [count, setCount] = useState(0);
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+                setCount((some_Value) => some_Value + 0.1);
+            }, 100);
+            return () => clearInterval(interval);
+        }, []);
+
+        return <div>Good Stopwatch: {count.toFixed(1)}</div>;
+    };
+
+
+
+    return (
+        <div
+            style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr"
+            }}
+        >
+            <BadStopwatch />
+            <GoodStopwatch />
         </div>
     );
+
 
 };
 
