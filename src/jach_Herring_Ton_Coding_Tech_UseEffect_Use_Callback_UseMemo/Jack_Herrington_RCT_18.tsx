@@ -9,7 +9,7 @@ import React, {
 import "./../styles.css";
 
 // const numbers = require('./numbers.json');
-export interface My_Component2_Props{
+export interface React_18_Props{
 
 
 }
@@ -18,7 +18,7 @@ export interface My_Component2_Props{
 // https://c2chs0.csb.app/
 // codesandbox.io/s/priceless-estrela-c2chs0?file=/src/App.js
 
-const React_18: React.FC<My_Component2_Props> = ({})=>{
+const React_18: React.FC<React_18_Props> = ({})=>{
 
 
 
@@ -27,12 +27,34 @@ const React_18: React.FC<My_Component2_Props> = ({})=>{
 
         useEffect(() => {
             console.log("BadStopwatch useEffect");
+
             setInterval(() => {
-                setCount((some_Value) => some_Value + 0.1);
-            }, 100);
+                setCount((some_Value:number) => some_Value + 0.1);
+            },
+                100);
         }, []);
 
         return <div>Bad Stopwatch: {count.toFixed(1)}</div>;
+    };
+
+
+    const BadStopwatch_V2 = () => {
+        const [count_V2, setCount_V2] = useState<number>(0);
+
+        useEffect(() => {
+            console.log("BadStopwatch useEffect");
+
+            setInterval(() => {
+                    // setCount_V2((some_Value:number) => some_Value + 0.1);
+                    // setCount_V2((some_Value:number) => some_Value + 0.1);
+                    setCount_V2(count_V2 + 0.1);
+                },
+                100);
+        }, [
+            count_V2
+        ]);
+
+        return <div>Bad Stopwatch V2: {count_V2.toFixed(1)}</div>;
     };
 
 
@@ -60,6 +82,7 @@ const React_18: React.FC<My_Component2_Props> = ({})=>{
             }}
         >
             <BadStopwatch />
+            <BadStopwatch_V2/>
             <GoodStopwatch />
         </div>
     );
@@ -67,7 +90,7 @@ const React_18: React.FC<My_Component2_Props> = ({})=>{
 
 };
 
-const Jack_Herrington= ()=>{
+const Jack_Herrington_RCT_18= ()=>{
 
     console.log("inside: of ","Common_Mistake_04");
     return(
@@ -80,4 +103,4 @@ const Jack_Herrington= ()=>{
 
 
 
-export default Jack_Herrington;
+export default Jack_Herrington_RCT_18;

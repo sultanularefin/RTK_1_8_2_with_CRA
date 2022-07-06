@@ -108,7 +108,7 @@ console.log(add10(2)); // 12
 
 ```
 ## output
-  ```java
+```java
   dnesday__byvl$ node closure.js 
   x in makeAdder:  5
   x in makeAdder:  10
@@ -117,7 +117,8 @@ console.log(add10(2)); // 12
   y in anonymous func:  2
   12
 arefin@arefin-HP-ProBook-450-G0:~/Programs/byvl/outlander_march_05_22/april_6_wednesday__byvl$ 
-    ```
+    
+```
  
  
  
@@ -141,3 +142,33 @@ https://reactjs.org/docs/hooks-custom.html
 
 ## HOC in React:
 https://reactjs.org/docs/higher-order-components.html 
+
+
+
+
+## interview : july_06_2022
+
+1. event loop:
+2. is javaScript single threaded.
+
+JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events,
+ and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
+
+The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a **single thread**, 
+but using a few smart data structures, it gives us the illusion 
+of multi-threading. Let’s take a look at what happens on the back-end.
+
+
+## virtual dom:
+
+What is the Virtual DOM?
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by 
+a library such as ReactDOM. This process is called reconciliation.
+
+This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. 
+This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app.
+
+
+
+
+
