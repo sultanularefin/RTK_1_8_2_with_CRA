@@ -2,7 +2,7 @@
 
 // import {Whiteboard} from "../src/whiteboard.js";
 
-import {Whiteboard} from "../white_Board/Whiteboard";
+import {Whiteboard} from "../rct/white_Board/Whiteboard";
 
 describe("Whiteboard contstructor", () => {
     test("items can be ordered, does not throw exception", () => {

@@ -6,7 +6,7 @@ import React, {
 } from "react";
 
 // import {Coutries_With_Phone_Flag, test_Numbers, Theme} from "./Coutries_With_Phone_Flag";
-import "./../styles.css";
+import "../../styles.css";
 
 // const numbers = require('./numbers.json');
 export interface React_18_Props{

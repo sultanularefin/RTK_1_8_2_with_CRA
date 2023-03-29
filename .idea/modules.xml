@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/rtk1_8_2_cra.iml" filepath="$PROJECT_DIR$/.idea/rtk1_8_2_cra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RTK_1_8_2_with_CRA.iml" filepath="$PROJECT_DIR$/.idea/RTK_1_8_2_with_CRA.iml" />
     </modules>
   </component>
 </project>
