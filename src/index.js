@@ -20,9 +20,13 @@ import Common_Mistake_04 from "./rct/jach_Herring_Ton_Coding_Tech_UseEffect_Use_
 import Jack_Herrington_RCT_18 from "./rct/jach_Herring_Ton_Coding_Tech_UseEffect_Use_Callback_UseMemo/Jack_Herrington_RCT_18";
 import MD_Testing_Wth_Pkg from "./rct/markdown_Testing/MD_Testing_Wth_Pkg";
 import Kory_Tegman_Input from "./rct/awesome_Input/Kory_Tegman_Input";
+import UseMemo_Index from "./use_Memo/UseMemo_Index";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
+
+
 
 root.render(
     <React.StrictMode>
@@ -57,7 +61,12 @@ root.render(
         {/*<Local_Fetch/>*/}
 
 
-        <Kory_Tegman_Input/>
+        {/*<Kory_Tegman_Input/>*/}
+
+        {/*https://react.dev/reference/react/useMemo#skipping-recalculation-with-usememo*/}
+        <UseMemo_Index/>
+
+
     </React.StrictMode>
 );
 

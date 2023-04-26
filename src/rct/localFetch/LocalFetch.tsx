@@ -40,27 +40,7 @@ const Local_Fetch: React.FC<LocalFetch_Props> = ({
     // unable to access public/test_data/data.json at june 19, 2022
 
 
-    useEffect(() => {
-            // setUsers(userData);
-            // setBooks(booksArray);
 
-            //http://localhost:3000/test_data/data.json
-            //2nd way
-
-        const request_URL="http://localhost:3000/sos";
-        // const request_URL="http://localhost:3000/teset_data/data.json";
-        //./teset_data/data.json
-            axios.
-            get(request_URL).
-            then((res) => setAlbums(res.data)).
-            catch(
-                (err:any)=>{
-
-                    console.log("__err__: ",err);
-                }
-            );
-        },[]
-    );
 
     return (
         <div className="App">
